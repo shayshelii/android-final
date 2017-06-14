@@ -7,8 +7,8 @@ import java.util.Date;
  */
 
 public class Movie {
-    String id;
-    String name;
-    Date dateCreated;
-    int rate;
+    public String id;
+    public String name;
+    public Date dateCreated;
+    public int rate;
 }

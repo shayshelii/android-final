@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.example.shaysheli.androaid_final.R;
 import com.example.shaysheli.androaid_final.fragments.Model.Movie;
 import com.example.shaysheli.androaid_final.fragments.movieListFragment.OnListFragmentInteractionListener;
-import com.example.shaysheli.androaid_final.fragments.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -37,9 +36,11 @@ public class MymovieRecyclerViewAdapter extends RecyclerView.Adapter<MymovieRecy
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).name);
+        Movie wantedMovie =  mValues.get(position);
+
+        holder.mItem = wantedMovie;
+        holder.mIdView.setText(wantedMovie.id);
+        holder.mContentView.setText(wantedMovie.name);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
